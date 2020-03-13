@@ -1,4 +1,9 @@
-# Project exclude paths
-/demo-dubbo-client/target/
-/demo-dubbo-consumer/target/
-/demo-dubbo-provider/target/
+.*
+*~
+target
+*.pyc
+gen-javabean
+logs
+dep.txt
+/target/
+*.iml

@@ -31,8 +31,7 @@
 
 		<!-- mi zookeeper -->
 		<dependency>
-			<groupId>com.xiaomi</groupId>
-			<artifactId>xiaomi-common-zookeeper</artifactId>
+
 			<version>${mi-zk-version}</version>
 			<exclusions>
 				<exclusion>
