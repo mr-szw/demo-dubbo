@@ -8,21 +8,16 @@
        http://www.springframework.org/schema/context/spring-context.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 
-	<bean id="zookeeperConfig" class="com.sindad.demo.dubbo.client.support.config.ZookeeperConfig" init-method="initMethod"/>
 
+	<dubbo:application name="demo-dubbo-service" />
+	<!-- 这里使用的注册中心是zookeeper -->
+	<dubbo:registry protocol="zookeeper" address=""  />
+
+	<dubbo:protocol name="rest" port="8090" />
 
 	<context:component-scan base-package="com.sindad.demo.dubbo"/>
 	<!-- 将具体的实现类加入到Spring容器中 -->
 	<bean id="testService" class="com.sindad.demo.dubbo.provider.service.TestServiceImpl"/>
-
-
-	<dubbo:application name="demo-dubbo-service" logger="log4j"/>
-
-	<!-- 这里使用的注册中心是zookeeper -->
-	<dubbo:registry protocol="zookeeper" address="#{zookeeperConfig.zkAddresses}" client="curator"/>
-
-	<!-- 用dubbo协议在20880端口暴露服务 -->
-	<dubbo:protocol name="dubbo" port="20881"/>
 
 	<!-- 将该接口暴露 -->
 	<dubbo:service interface="com.sindad.demo.dubbo.client.service.TestService" version="1.0.0" group="miui-vip" ref="testService"/>

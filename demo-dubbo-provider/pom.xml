@@ -20,20 +20,56 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.sinbad.dubbo.demo</groupId>
 			<artifactId>demo-dubbo-client</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.7.3</version>
 		</dependency>
 
 
+		<!-- zk 的客户端工程 -->
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>3.8.1.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>3.8.1.Final</version>
+		</dependency>
 
 	</dependencies>
 
